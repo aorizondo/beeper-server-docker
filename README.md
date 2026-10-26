@@ -107,6 +107,10 @@ GitHub Actions builds `ghcr.io/aorizondo/beeper-server`. It is **private**: Beep
 the CLI are Beeper's software, so this repository ships only the recipe that downloads and verifies them.
 Build your own image from this repo, or fork it and let the workflow publish to your account.
 
+> **A package published from a public repository starts out public.** After the first run, open
+> *Package settings → Change visibility* and set it to **Private**: later builds keep that setting.
+> Visibility can't be changed through the API.
+
 ## Troubleshooting
 
 [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md): verification that never shows up, bbctl login
