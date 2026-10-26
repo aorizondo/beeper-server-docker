@@ -1,0 +1,19 @@
+services:
+  beeper:
+    build: .
+    # or, once you publish your own build: image: ghcr.io/<you>/beeper-server:latest
+    container_name: beeper
+    restart: unless-stopped
+    init: true                     # tini: reaps the bridge processes
+    environment:
+      BRIDGES: "sh-whatsapp"       # self-hosted bridges started by bbctl; empty = none
+    volumes:
+      - beeper-data:/data          # server database and keys, CLI and bbctl logins: back it up
+    mem_limit: 1g
+    # Other containers on this network reach it as http://beeper:23373.
+    # Publish it on loopback only: the API token gives access to all your chats.
+    ports:
+      - "127.0.0.1:23373:23373"
+
+volumes:
+  beeper-data:
