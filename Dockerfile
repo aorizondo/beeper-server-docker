@@ -6,8 +6,8 @@
 FROM debian:bookworm-slim
 
 # https://api.beeper.com/desktop/update-feed.json?bundleID=com.automattic.beeper.server&platform=linux&channel=stable&arch=x64
-ARG BEEPER_VERSION=4.3.229
-ARG BEEPER_SHA512=No6Zfp+6OfxwN4ll6Yh95Cvaobc0VqxutlyeBa8GyJOvRvI13Mqvd1XIrC4F+63Rr4SDb3brWGPdvRJoau/dpA==
+ARG BEEPER_VERSION=4.3.352
+ARG BEEPER_SHA512=2y8JaR5JlAeNhPgJNsXwNCIb+AS9T0ZaF5e0QPtVUoMApSALjHaDTGuDiwmD58XRD/XkiJlOEH3+P8a7zPlUrA==
 # https://github.com/beeper/bridge-manager/releases
 ARG BBCTL_VERSION=v0.15.0
 ARG BBCTL_SHA256=ff3091816429d41aeb51871445f8ccd77864ebe479a57a4b4a5981fd5051a73e
